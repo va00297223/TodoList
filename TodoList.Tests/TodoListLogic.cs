@@ -12,17 +12,17 @@ namespace TodoList.Tests
             TodoItem todoItem = new TodoItem
             {
                 Id = 1,
-                DueDate = DateTime.Now.AddDays(7),
-                Description = "Do the assignments"
+                DueDate = DateTime.Now.AddDays(6),
+                Description = "abc"
             };
 
             // Act
 
             // Assert
             Assert.AreEqual(1, todoItem.Id);
-            Assert.AreEqual(DateTime.Now.AddDays(7).Date, todoItem.DueDate.Date);
+            Assert.AreEqual(DateTime.Now.AddDays(6).Date, todoItem.DueDate.Date);
             Assert.IsNull(todoItem.CompletedDate);
-            Assert.AreEqual("Do the assignments", todoItem.Description);
+            Assert.AreEqual("abc", todoItem.Description);
         }
 
 
@@ -35,7 +35,7 @@ namespace TodoList.Tests
             {
                 Id = 2,
                 DueDate = DateTime.Now.AddDays(3),
-                Description = "Email to professor"
+                Description = "xyz"
             };
 
             // Act
