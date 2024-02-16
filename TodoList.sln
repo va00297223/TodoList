@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Models", "TodoList.Models\TodoList.Models.csproj", "{900B38AA-7494-4438-960F-F469EDACDA4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.API", "TodoList.API\TodoList.API.csproj", "{BEBBA87B-AD3E-4A1A-9A12-D48A429FD8B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Tests", "TodoList.Tests\TodoList.Tests.csproj", "{FE3499BB-99AD-4CFD-ACDD-1A309EB94CA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{900B38AA-7494-4438-960F-F469EDACDA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900B38AA-7494-4438-960F-F469EDACDA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900B38AA-7494-4438-960F-F469EDACDA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900B38AA-7494-4438-960F-F469EDACDA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBBA87B-AD3E-4A1A-9A12-D48A429FD8B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBBA87B-AD3E-4A1A-9A12-D48A429FD8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBBA87B-AD3E-4A1A-9A12-D48A429FD8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBBA87B-AD3E-4A1A-9A12-D48A429FD8B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE3499BB-99AD-4CFD-ACDD-1A309EB94CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3499BB-99AD-4CFD-ACDD-1A309EB94CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3499BB-99AD-4CFD-ACDD-1A309EB94CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3499BB-99AD-4CFD-ACDD-1A309EB94CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
