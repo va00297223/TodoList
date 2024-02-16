@@ -19,7 +19,7 @@ namespace TodoList.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItem>>> GetToDoItemsWithoutCompletedDate()
+        public async Task<ActionResult<IEnumerable<TodoItem>>> ItemsWithoutCompletedDate()
         {
             var todoItems = await _dbContext.ToDoItems
                 .Where(item => item.CompletedDate == null)
@@ -28,7 +28,7 @@ namespace TodoList.Controllers
             return Ok(todoItems);
         }
         [HttpPost]
-        public async Task<ActionResult<TodoItem>> CreateToDoItem([FromBody] TodoItem newToDoItem)
+        public async Task<ActionResult<TodoItem>> CreateItem([FromBody] TodoItem newToDoItem)
         {
             if (newToDoItem == null)
             {
@@ -38,12 +38,11 @@ namespace TodoList.Controllers
             _dbContext.ToDoItems.Add(newToDoItem);
             await _dbContext.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetToDoItemById), new { id = newToDoItem.Id }, newToDoItem);
+            return CreatedAtAction(nameof(GetItemByID), new { id = newToDoItem.Id }, newToDoItem);
         }
 
-        //Create a Get request that takes one argument of "Id" and returns the ToDoItem that matches the Id.
         [HttpGet("{id}")]
-        public async Task<ActionResult<TodoItem>> GetToDoItemById(int id)
+        public async Task<ActionResult<TodoItem>> GetItemByID(int id)
         {
             var todoItem = await _dbContext.ToDoItems.FindAsync(id);
 
@@ -55,9 +54,8 @@ namespace TodoList.Controllers
             return Ok(todoItem);
         }
 
-        //Create a Post request that takes one argument of Id and fills in the CompletedDate with the current datetime.
         [HttpPost("{id}/complete")]
-        public async Task<ActionResult> MarkToDoItemAsCompleted(int id)
+        public async Task<ActionResult> MarkItemComplete(int id)
         {
             var todoItem = await _dbContext.ToDoItems.FindAsync(id);
 

@@ -6,14 +6,14 @@ namespace TodoList.Tests
     public class TodoListLogic
     {
         [TestMethod]
-        public void TodoItem_Initialization_Success()
+        public void Todo_Intialize()
         {
             // Arrange
             TodoItem todoItem = new TodoItem
             {
                 Id = 1,
                 DueDate = DateTime.Now.AddDays(6),
-                Description = "abc"
+                Description = "Hello Reader..!"
             };
 
             // Act
@@ -25,17 +25,15 @@ namespace TodoList.Tests
             Assert.AreEqual("abc", todoItem.Description);
         }
 
-
-
         [TestMethod]
-        public void TodoItem_CompleteTask_Success()
+        public void TodoCompleteTask()
         {
             // Arrange
             TodoItem todoItem = new TodoItem
             {
                 Id = 2,
-                DueDate = DateTime.Now.AddDays(3),
-                Description = "xyz"
+                DueDate = DateTime.Now.AddDays(4),
+                Description = "Good Morning..!"
             };
 
             // Act
@@ -47,38 +45,35 @@ namespace TodoList.Tests
         }
 
         [TestMethod]
-        public void TodoItem_CompletedDate_NullByDefault()
+        public void Todo_CompletedDateNullBy()
         {
             // Arrange
             TodoItem todoItem = new TodoItem
             {
                 Id = 3,
                 DueDate = DateTime.Now.AddDays(5),
-                Description = "Attend meeting"
+                Description = "Join Zoom..!"
             };
 
-            // Act
-
-            // Assert
             Assert.IsNull(todoItem.CompletedDate);
         }
 
         [TestMethod]
-        public void TodoItem_UpdateDescription_Success()
+        public void TodoUpdateTask()
         {
             // Arrange
             TodoItem todoItem = new TodoItem
             {
                 Id = 4,
-                DueDate = DateTime.Now.AddDays(2),
+                DueDate = DateTime.Now.AddDays(3),
                 Description = "dicussion forum"
             };
 
             // Act
-            todoItem.Description = "discussion quiz";
+            todoItem.Description = "Unit Tests";
 
             // Assert
-            Assert.AreEqual("discussion quiz", todoItem.Description);
+            Assert.AreEqual("Unit Tests", todoItem.Description);
         }
     }
 }
